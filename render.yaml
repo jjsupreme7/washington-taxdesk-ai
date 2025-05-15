@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tax-ai-app
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: Dockerfile
+    disk:
+      name: chroma-storage
+      mountPath: /app/chroma_data
+      sizeGB: 1
